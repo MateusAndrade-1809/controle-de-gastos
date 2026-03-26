@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Gastos</h1>
+
+        <div class="total">
+            <h2>Total gasto: R$ {{ "%.2f"|format(total) }}</h2>
+        </div>
+
+        <form action="/adicionar" method="POST" class="formulario">
+            <input type="text" name="nome" placeholder="Nome do gasto" required>
+            <input type="number" step="0.01" name="valor" placeholder="Valor" required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="lista-gastos">
+            <h2>Lista de gastos</h2>
+
+            {% if gastos %}
+                <ul>
+                    {% for gasto in gastos %}
+                        <li>
+                            <span>{{ gasto.nome }} - R$ {{ gasto.valor }}</span>
+                            <a href="/excluir/{{ loop.index0 }}" class="btn-excluir">Excluir</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Nenhum gasto cadastrado ainda.</p>
+            {% endif %}
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2026 Controle de Gastos</p>
+        <p>Desenvolvido por Mateus Andrade</p>
+    </footer>
+</body>
+</html>

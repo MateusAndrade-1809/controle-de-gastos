@@ -1,0 +1,129 @@
+/* =========================
+   RESET / CONFIG GERAL
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   HEADER (TÍTULO)
+========================= */
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TOTAL DE GASTOS
+========================= */
+
+.total {
+    background-color: #e8f0fe;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.total h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.formulario input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.formulario button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #2d89ef;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #1b5fbf;
+}
+
+/* =========================
+   LISTA DE GASTOS
+========================= */
+
+.lista-gastos h2 {
+    text-align: center;
+    color: #333;
+}
+
+.lista-gastos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-gastos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* =========================
+   BOTÃO EXCLUIR
+========================= */
+
+.btn-excluir {
+    text-decoration: none;
+    color: white;
+    background-color: #d9534f;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.btn-excluir:hover {
+    background-color: #b52b27;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
